@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#game {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#player1, #player2 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+}
+
+#player1Guess, #player2Guess {
+    margin-top: 20px;
+}
+
+#player1Result, #player2Result {
+    margin-top: 10px;
+    font-weight: bold;
+}
