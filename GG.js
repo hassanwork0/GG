@@ -2,6 +2,7 @@ let player1Number = "";
 let player2Number = "";
 let currentPlayer = 1;
 
+
 function makeGuess(player) {
     let guess = player === 1 ? document.getElementById('player1GuessInput').value : document.getElementById('player2GuessInput').value;
     let result = player === 1 ? document.getElementById('player1Result') : document.getElementById('player2Result');
@@ -18,7 +19,7 @@ function makeGuess(player) {
         }
     }
 
-    result.innerHTML = `Correct Digits: ${correctDigits}, Correct Positions: ${correctPositions}`;
+    result.innerHTML = Correct Digits: ${correctDigits}, Correct Positions: ${correctPositions};
 
     currentPlayer = currentPlayer === 1 ? 2 : 1;
     document.getElementById('player1Guess').style.display = currentPlayer === 1 ? 'block' : 'none';
