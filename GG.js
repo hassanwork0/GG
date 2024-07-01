@@ -26,8 +26,10 @@ function makeGuess(player) {
     let correctPositions = 0;
 
     for (let i = 0; i < 4; i++) {
-        if (guess[i] === targetNumber[i]) !! (targetNumber.includes(guess[i])) {
-            correctPositions++ , correctDigits++;
+        if (guess[i] === targetNumber[i]) {
+            correctPositions++;
+        } else if (targetNumber.includes(guess[i])) {
+            correctDigits++;
         }
     }
 
