@@ -2,6 +2,20 @@ let player1Number = "";
 let player2Number = "";
 let currentPlayer = 1;
 
+function startGame(player) {
+    if (player === 1) {
+        player1Number = document.getElementById('player1Number').value;
+        document.getElementById('player1Number').disabled = true;
+    } else {
+        player2Number = document.getElementById('player2Number').value;
+        document.getElementById('player2Number').disabled = true;
+    }
+
+    if (player1Number && player2Number) {
+        document.getElementById('player1Guess').style.display = 'block';
+        document.getElementById('player2Guess').style.display = 'none';
+    }
+}
 
 function makeGuess(player) {
     let guess = player === 1 ? document.getElementById('player1GuessInput').value : document.getElementById('player2GuessInput').value;
