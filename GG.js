@@ -14,7 +14,9 @@ function makeGuess(player) {
     for (let i = 0; i < 4; i++) {
         if (guess[i] === targetNumber[i]) {
             correctPositions++;
-        } else if (targetNumber.includes(guess[i])) {
+        }
+    for (let i = 0; i < 4; i++) {
+        if (targetNumber.includes(guess[i])) {
             correctDigits++;
         }
     }
