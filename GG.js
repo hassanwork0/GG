@@ -26,14 +26,15 @@ function makeGuess(player) {
     let correctPositions = 0;
 
     for (let i = 0; i < 4; i++) {
-        if (guess[i] === targetNumber[i]) {
+        if (guess === targetNumber) {
             correctPositions++;
-        } else if (targetNumber.includes(guess[i])) {
+        }
+        if (targetNumber.includes(guess)) {
             correctDigits++;
         }
     }
 
-    result.innerHTML = Correct Digits: ${correctDigits}, Correct Positions: ${correctPositions};
+    result.innerHTML = `Correct Digits: ${correctDigits}, Correct Positions: ${correctPositions}`;
 
     currentPlayer = currentPlayer === 1 ? 2 : 1;
     document.getElementById('player1Guess').style.display = currentPlayer === 1 ? 'block' : 'none';
