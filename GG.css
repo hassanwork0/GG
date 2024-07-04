@@ -17,6 +17,7 @@ body {
 
 #player1Guess, #player2Guess {
     margin-top: 20px;
+    display: none;
 }
 
 #player1Result, #player2Result {
