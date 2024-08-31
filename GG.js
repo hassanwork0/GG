@@ -26,13 +26,16 @@ function makeGuess(player) {
     let correctPositions = 0;
 
     for (let i = 0; i < 4; i++) {
-        if (guess === targetNumber) {
-            correctPositions++;
-        }
-        if (targetNumber.includes(guess)) {
+        for (let j = 0; j < 4; j++) {
+        if (guess[j] === targetNumber[i]) {
             correctDigits++;
+            if (i == j) {
+                correctPositions++;
+            }
+            continue;
         }
     }
+}
 
     result.innerHTML = `Correct Digits: ${correctDigits}, Correct Positions: ${correctPositions}`;
 
